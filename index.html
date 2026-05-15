@@ -1,0 +1,3126 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPDA Kalsel 2026 — Pekan Olahraga Pelajar Daerah Kalimantan Selatan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --white: #ffffff;
+            --gray-50: #f8f9fb;
+            --gray-100: #f1f3f7;
+            --gray-200: #e4e8f0;
+            --gray-300: #c8d0de;
+            --gray-500: #7a8599;
+            --gray-700: #3d4a5c;
+            --gray-900: #1a2236;
+            --blue-50: #eef4ff;
+            --blue-100: #dbeafe;
+            --blue-400: #3b82f6;
+            --blue-500: #2563eb;
+            --blue-600: #1d4ed8;
+            --blue-700: #1e3a8a;
+            --blue-800: #1e3060;
+            --blue-900: #0f1f42;
+            --gold-300: #fcd34d;
+            --gold-400: #f59e0b;
+            --gold-500: #d97706;
+            --gold-600: #b45309;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--white);
+            color: var(--gray-900);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 2rem;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.transparent {
+            background: transparent;
+        }
+
+        .navbar.solid {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo-box {
+            background:
+                #f7f8fa;
+            padding: 3px 18px;
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo-box:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.12),
+                0 4px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-logo-box img {
+            width: 200px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-logo-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .nav-logo-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        .nav-logo-text {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .navbar.transparent .nav-logo-text {
+            color: white;
+        }
+
+        .nav-logo-text span {
+            color: var(--gold-500);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--gray-700);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
+        }
+
+        .navbar.transparent .nav-menu a {
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .nav-menu a:hover {
+            background: var(--blue-50);
+            color: var(--blue-600);
+        }
+
+        .navbar.transparent .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        .nav-cta {
+            background: var(--gold-400) !important;
+            color: var(--gray-900) !important;
+            font-weight: 700 !important;
+            padding: 8px 18px !important;
+            border-radius: var(--radius-sm) !important;
+            transition: all 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-500) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
+        }
+
+        .navbar.transparent .nav-cta {
+            color: var(--gray-900) !important;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .navbar.solid .nav-hamburger span {
+            background: var(--gray-700);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(165deg, #0f1f42 0%, #1d3a8a 40%, #1e5ba8 70%, #1d4ed8 100%);
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 60% 80%, rgba(30, 58, 138, 0.4) 0%, transparent 50%);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255, 255, 255, 1) 40px, rgba(255, 255, 255, 1) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255, 255, 255, 1) 40px, rgba(255, 255, 255, 1) 41px);
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 120px 2rem 4rem;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            color: var(--gold-300);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 0.8s ease both;
+        }
+
+        .hero-badge i {
+            font-size: 11px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.08;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .hero-title .gold {
+            color: var(--gold-400);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            font-weight: 400;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-tagline {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold-400);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero-officials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease 0.35s both;
+        }
+
+        .official-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .official-photo {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            border: 3px solid rgba(245, 158, 11, 0.5);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.12);
+        }
+
+
+
+
+        .official-photo i {
+            font-size: 36px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .official-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .official-title {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.55);
+            text-align: center;
+        }
+
+        .official-divider {
+            width: 1px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold-400);
+            color: var(--gray-900);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 13px 26px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s;
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-500);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 13px 26px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            transition: all 0.25s;
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            z-index: 2;
+            animation: fadeIn 1.2s ease 1s both;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        /* ===== SECTION BASE ===== */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--blue-500);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background: var(--blue-500);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 15.5px;
+            color: var(--gray-500);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header.center {
+            text-align: center;
+        }
+
+        .section-header.center .section-label {
+            justify-content: center;
+        }
+
+        .section-header.center .section-label::before {
+            display: none;
+        }
+
+        .section-header.center .section-desc {
+            margin: 0 auto;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gray-200), transparent);
+            margin: 0;
+        }
+
+        /* ===== STATS ===== */
+        .stats-section {
+            background: var(--blue-900);
+            padding: 4rem 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--gold-400), var(--gold-500));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 22px;
+            color: var(--blue-400);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-number .gold {
+            color: var(--gold-400);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        /* ===== INFORMASI ===== */
+        .info-section {
+            background: var(--gray-50);
+        }
+
+        .info-tema-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .info-tema-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--blue-500), var(--gold-400));
+        }
+
+        .info-tema-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--blue-50);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 24px;
+            color: var(--blue-500);
+        }
+
+        .info-tema-text {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card-title i {
+            width: 34px;
+            height: 34px;
+            background: var(--blue-50);
+            color: var(--blue-500);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .peserta-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .peserta-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--gray-700);
+            padding: 8px 12px;
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--gray-100);
+        }
+
+        .peserta-list li i {
+            color: var(--blue-500);
+            font-size: 13px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .syarat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .syarat-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13.5px;
+            color: var(--gray-700);
+            padding: 8px 10px;
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--gray-100);
+            line-height: 1.4;
+        }
+
+        .syarat-item i {
+            color: var(--blue-500);
+            font-size: 13px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .syarat-note {
+            margin-top: 1rem;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #fff7ed, #fffbeb);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--gold-600);
+            font-weight: 600;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .syarat-note i {
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== WAKTU & TEMPAT ===== */
+        .waktu-section {
+            background: white;
+        }
+
+        .event-date-card {
+            background: linear-gradient(135deg, var(--blue-700), var(--blue-900));
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .event-date-card::before {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .event-date-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+
+        .event-date-content {
+            flex: 1;
+        }
+
+        .event-date-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold-300);
+            margin-bottom: 0.5rem;
+        }
+
+        .event-date-main {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .event-date-sub {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .event-date-countdown {
+            display: flex;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-num {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold-300);
+            line-height: 1;
+            display: block;
+        }
+
+        .countdown-unit {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .venue-table-wrapper {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+        }
+
+        .venue-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .venue-table thead tr {
+            background: var(--blue-800);
+        }
+
+        .venue-table thead th {
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .venue-table tbody tr {
+            border-bottom: 1px solid var(--gray-100);
+            transition: background 0.2s;
+        }
+
+        .venue-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .venue-table tbody tr:hover {
+            background: var(--blue-50);
+        }
+
+        .venue-table td {
+            padding: 14px 20px;
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+
+        .venue-table td:first-child {
+            color: var(--gray-500);
+            font-size: 13px;
+        }
+
+        .venue-sport {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .venue-sport-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--blue-50);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--blue-500);
+            flex-shrink: 0;
+        }
+
+        .venue-name {
+            font-weight: 500;
+            color: var(--gray-900);
+        }
+
+        .venue-address {
+            font-size: 12.5px;
+            color: var(--gray-500);
+            margin-top: 2px;
+        }
+
+        /* ===== TECHNICAL MEETING ===== */
+        .tm-section {
+            background: var(--gray-50);
+        }
+
+        .tm-table-wrapper {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+        }
+
+        .tm-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tm-table thead tr {
+            background: linear-gradient(to right, var(--blue-800), var(--blue-600));
+        }
+
+        .tm-table thead th {
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .tm-table tbody tr {
+            background: white;
+            border-bottom: 1px solid var(--gray-100);
+            transition: background 0.2s;
+        }
+
+        .tm-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .tm-table tbody tr:hover {
+            background: var(--blue-50);
+        }
+
+        .tm-table td {
+            padding: 14px 20px;
+            font-size: 14px;
+            color: var(--gray-700);
+            vertical-align: middle;
+        }
+
+        .badge-date {
+            background: var(--blue-50);
+            color: var(--blue-600);
+            font-weight: 600;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 100px;
+            border: 1px solid var(--blue-100);
+            white-space: nowrap;
+        }
+
+        .badge-time {
+            background: #f0fdf4;
+            color: #15803d;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 100px;
+            border: 1px solid #bbf7d0;
+            white-space: nowrap;
+        }
+
+        /* ===== CABANG OLAHRAGA ===== */
+        .cabor-section {
+            background: white;
+        }
+
+        .cabor-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .cabor-card {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+        }
+
+        .cabor-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cabor-card-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .cabor-card:hover .cabor-card-bg {
+            transform: scale(1.06);
+        }
+
+        .cabor-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 31, 66, 0.9) 0%, rgba(15, 31, 66, 0.4) 50%, rgba(15, 31, 66, 0.1) 100%);
+            transition: background 0.3s;
+        }
+
+        .cabor-card:hover .cabor-overlay {
+            background: linear-gradient(to top, rgba(15, 31, 66, 0.95) 0%, rgba(15, 31, 66, 0.55) 60%, rgba(15, 31, 66, 0.2) 100%);
+        }
+
+        .cabor-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .cabor-icon-badge {
+            width: 44px;
+            height: 44px;
+            background: rgba(245, 158, 11, 0.9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 0.75rem;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cabor-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+
+        .cabor-info {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .cabor-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cabor-placeholder i {
+            font-size: 80px;
+            opacity: 0.07;
+            color: white;
+        }
+
+        /* ===== QUOTE SLIDER ===== */
+        .quote-section {
+            background: var(--blue-900);
+            padding: 5rem 2rem;
+            overflow: hidden;
+        }
+
+        .quote-wrapper {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            min-height: 180px;
+        }
+
+        .quote-icon {
+            font-size: 48px;
+            color: var(--gold-400);
+            opacity: 0.4;
+            margin-bottom: 1.5rem;
+            line-height: 1;
+        }
+
+        .quote-slide {
+            display: none;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .quote-slide.active {
+            display: block;
+        }
+
+        .quote-text {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 400;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-author {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gold-400);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .quote-dots {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .quote-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            padding: 0;
+        }
+
+        .quote-dot.active {
+            background: var(--gold-400);
+            width: 24px;
+            border-radius: 3px;
+        }
+
+        /* ===== MEDALI ===== */
+        .medali-section {
+            background: white;
+        }
+
+        .medali-table-wrapper {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+            margin-bottom: 2rem;
+            max-height: 480px;
+            overflow-y: auto;
+        }
+
+        .medali-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .medali-table thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .medali-table thead tr {
+            background: var(--gray-900);
+        }
+
+        .medali-table thead th {
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .medali-table thead th.center {
+            text-align: center;
+        }
+
+        .medali-table tbody tr {
+            background: white;
+            border-bottom: 1px solid var(--gray-100);
+            transition: background 0.15s;
+        }
+
+        .medali-table tbody tr:hover {
+            background: var(--gray-50);
+        }
+
+        .medali-table tbody tr:nth-child(1) {
+            background: linear-gradient(to right, #fffbeb, white);
+        }
+
+        .medali-table tbody tr:nth-child(2) {
+            background: linear-gradient(to right, #f8fafc, white);
+        }
+
+        .medali-table tbody tr:nth-child(3) {
+            background: linear-gradient(to right, #fff7f5, white);
+        }
+
+        .medali-table td {
+            padding: 14px 20px;
+            font-size: 14px;
+            color: var(--gray-700);
+            vertical-align: middle;
+        }
+
+        .rank-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .rank-2 {
+            background: linear-gradient(135deg, #94a3b8, #64748b);
+        }
+
+        .rank-3 {
+            background: linear-gradient(135deg, #d97706, #92400e);
+        }
+
+        .rank-n {
+            background: var(--gray-200);
+            color: var(--gray-600);
+        }
+
+        .kontingen-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .kontingen-logo {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            font-weight: 800;
+            flex-shrink: 0;
+            border: 1px solid var(--gray-200);
+        }
+
+        .kontingen-name {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .medal-cell {
+            text-align: center;
+        }
+
+        .medal-emas {
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--gold-500);
+        }
+
+        .medal-perak {
+            font-weight: 700;
+            font-size: 15px;
+            color: #64748b;
+        }
+
+        .medal-perunggu {
+            font-weight: 700;
+            font-size: 15px;
+            color: #d97706;
+        }
+
+        .medal-total {
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--gray-900);
+        }
+
+        .cabor-medal-section {
+            margin-top: 3rem;
+        }
+
+        .cabor-medal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .cabor-medal-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: all 0.25s;
+        }
+
+        .cabor-medal-card:hover {
+            border-color: var(--blue-200);
+            background: var(--blue-50);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cabor-medal-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .cabor-medal-icon {
+            width: 36px;
+            height: 36px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--blue-500);
+            border: 1px solid var(--gray-200);
+        }
+
+        .cabor-medal-name {
+            font-weight: 700;
+            color: var(--gray-900);
+            font-size: 14px;
+        }
+
+        .cabor-medal-stats {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cabor-medal-stat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .cabor-medal-stat-num {
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+        }
+
+        .cabor-medal-stat-label {
+            font-size: 11px;
+            color: var(--gray-500);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .total-row {
+            background: var(--gray-900) !important;
+        }
+
+        .total-row td {
+            color: white !important;
+            font-weight: 700;
+            padding: 16px 20px;
+        }
+
+        /* ===== SPONSOR ===== */
+        .sponsor-section {
+            background: var(--gray-50);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .sponsor-header {
+            max-width: 1120px;
+            margin: 0 auto 2.5rem;
+            padding: 0 2rem;
+        }
+
+        .marquee-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2rem;
+            animation: marquee 30s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .sponsor-logo {
+            width: 148px;
+            height: 70px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            filter: grayscale(100%) opacity(0.45);
+            transition: all 0.3s;
+            overflow: hidden;
+            padding: 10px 12px;
+        }
+
+        .sponsor-logo svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .sponsor-logo:hover {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.04);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 900;
+            width: 48px;
+            height: 48px;
+            background: var(--blue-800);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 20px rgba(30, 48, 96, 0.35);
+            opacity: 0;
+            transform: translateY(16px);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: var(--blue-600);
+            box-shadow: 0 8px 28px rgba(30, 48, 96, 0.45);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top:active {
+            transform: scale(0.95);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--gray-900);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-brand-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .footer-brand-name {
+            font-size: 16px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-brand-name span {
+            color: var(--gold-400);
+        }
+
+        .footer-desc {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .footer-col-title {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .footer-contact-item i {
+            color: var(--gold-400);
+            font-size: 14px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-contact-item span {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cabor-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cabor-medal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 3.5rem 1.25rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-hamburger {
+                display: flex;
+            }
+
+            .hero-content {
+                padding: 100px 1.25rem 3rem;
+            }
+
+            .hero-officials {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .official-divider {
+                display: none;
+            }
+
+            .event-date-card {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .event-date-countdown {
+                justify-content: center;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .official-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cabor-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .syarat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 31, 66, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav.open {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 8px 24px;
+            transition: color 0.2s;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--gold-400);
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .kontingen-logos {
+            width: 40px;
+            height: 50px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .kontingen-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="closeMobileNav()"><i class="fas fa-times"></i></button>
+        <a href="#beranda" onclick="closeMobileNav()">Beranda</a>
+        <a href="#informasi" onclick="closeMobileNav()">Informasi</a>
+        <a href="#jadwal" onclick="closeMobileNav()">Jadwal</a>
+        <a href="#cabor" onclick="closeMobileNav()">CABOR</a>
+        <a href="#medali" onclick="closeMobileNav()">Medali</a>
+        <a href="#sponsor" onclick="closeMobileNav()">Sponsor</a>
+        <a href="#kontak" onclick="closeMobileNav()">Kontak</a>
+    </nav>
+
+    <!-- NAVBAR -->
+    <header class="navbar transparent" id="navbar">
+        <a href="#beranda" class="nav-logo">
+            <div class="nav-logo-box">
+                <img src="img/dispora.png" alt="POPDA Kalsel">
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#informasi">Informasi</a></li>
+            <li><a href="#jadwal">Jadwal</a></li>
+            <li><a href="#cabor">CABOR</a></li>
+            <li><a href="#medali">Medali</a></li>
+            <li><a href="#sponsor">Sponsor</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#jadwal" class="nav-cta">Lihat Jadwal</a></li>
+        </ul>
+        <button class="nav-hamburger" onclick="openMobileNav()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-trophy"></i>
+                Pekan Olahraga Pelajar Daerah
+            </div>
+            <h1 class="hero-title">POPDA <span class="gold">Kalsel</span><br>2026</h1>
+            <p class="hero-subtitle">Bekerja Bersama Tingkatkan Prestasi Olahraga Pelajar Kalimantan Selatan</p>
+            <div class="hero-tagline">Bekerja Bersama Merangkul Semua</div>
+
+            <div class="hero-officials">
+                <div class="official-card">
+                    <div class="official-photo">
+                        <img src="img/gub.jpeg" alt="Foto Kandidat" class="official-img">
+                    </div>
+                    <div class="official-name">H. Muhidin</div>
+                    <div class="official-title">Gubernur Kalimantan Selatan</div>
+                </div>
+                <div class="official-divider"></div>
+                <div class="official-card">
+                    <div class="official-photo">
+                        <img src="img/wagub.png" alt="Foto Kandidat" class="official-img">
+                    </div>
+                    <div class="official-name">H. Hasnuryadi Sulaiman</div>
+                    <div class="official-title">Wakil Gubernur Kalimantan Selatan</div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#jadwal" class="btn-primary"><i class="fas fa-calendar-alt"></i> Lihat Jadwal</a>
+                <a href="#informasi" class="btn-outline"><i class="fas fa-info-circle"></i> Informasi Peserta</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Gulir ke bawah</span>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card reveal">
+                <div class="stat-icon"><i class="fas fa-medal"></i></div>
+                <div class="stat-number" data-target="7"><span class="gold">7</span></div>
+                <div class="stat-label">Nomor Tanding</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-1">
+                <div class="stat-icon"><i class="fas fa-running"></i></div>
+                <div class="stat-number" data-target="1021">1021</div>
+                <div class="stat-label">Total Atlet</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+                <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="stat-number" data-target="167">167</div>
+                <div class="stat-label">Pelatih</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number" data-target="83">83</div>
+                <div class="stat-label">Ofisial</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFORMASI -->
+    <section class="info-section" id="informasi">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Informasi Event</div>
+                <h2 class="section-title">Tentang POPDA Kalsel 2026</h2>
+                <p class="section-desc">Ajang bergengsi olahraga pelajar tingkat provinsi Kalimantan Selatan yang
+                    mempertemukan
+                    atlet-atlet muda berbakat dari seluruh kabupaten dan kota.</p>
+            </div>
+
+            <div class="info-tema-card reveal">
+                <div class="info-tema-icon"><i class="fas fa-star"></i></div>
+                <div class="section-label" style="justify-content:center;margin-bottom:0.5rem;">Tema POPDA Kalsel 2026
+                </div>
+                <div class="info-tema-text">"Bekerja Bersama Tingkatkan Prestasi Olahraga Pelajar Kalimantan Selatan"
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card reveal">
+                    <div class="info-card-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Peserta Yang Berhak
+                    </div>
+                    <ul class="peserta-list">
+                        <li><i class="fas fa-check-circle"></i> Sekolah negeri dan swasta umum</li>
+                        <li><i class="fas fa-check-circle"></i> Kementerian Agama (MA, MTs sederajat)</li>
+                        <li><i class="fas fa-check-circle"></i> Kementerian Pertanian</li>
+                        <li><i class="fas fa-check-circle"></i> Kementerian Kesehatan</li>
+                        <li><i class="fas fa-check-circle"></i> Kementerian Pertahanan dan Keamanan</li>
+                        <li><i class="fas fa-check-circle"></i> Sekolah sederajat lainnya</li>
+                    </ul>
+                </div>
+
+                <div class="info-card reveal reveal-delay-1">
+                    <div class="info-card-title">
+                        <i class="fas fa-clipboard-list"></i>
+                        Persyaratan Peserta
+                    </div>
+                    <div class="syarat-grid">
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Kelahiran 1 Jan 2009 ke atas</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Maks. kelas 11 SMA/SMK/MA</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Sesuai domisili sekolah</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Surat rekomendasi DISPORA</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Upload NISN</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Pas foto terbaru</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> KTP / KIA</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Akta kelahiran</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Kartu keluarga</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Ijazah terakhir</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Raport terakhir</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Surat aktif sekolah</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Surat sehat</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Asuransi peserta</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Ketentuan atlet PPLP/PPLPD</div>
+                        <div class="syarat-item"><i class="fas fa-check-circle"></i> Ketentuan perpindahan atlet</div>
+                    </div>
+                    <div class="syarat-note">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Syarat berikut mutlak dan cabang olahraga tidak perlu menambah syarat lainnya.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- WAKTU & TEMPAT -->
+    <section class="waktu-section" id="jadwal">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Waktu & Tempat</div>
+                <h2 class="section-title">Jadwal Pelaksanaan</h2>
+                <p class="section-desc">POPDA Kalsel 2026 akan diselenggarakan selama 7 hari di beberapa venue di
+                    Banjarmasin
+                    dan sekitarnya.</p>
+            </div>
+
+            <div class="event-date-card reveal">
+                <div class="event-date-icon">📅</div>
+                <div class="event-date-content">
+                    <div class="event-date-label">Tanggal Pelaksanaan</div>
+                    <div class="event-date-main">18 — 24 Mei 2026</div>
+                    <div class="event-date-sub">Kalimantan Selatan, Indonesia</div>
+                </div>
+                <div class="event-date-countdown" id="countdown">
+                    <div class="countdown-item"><span class="countdown-num" id="cd-days">--</span><span
+                            class="countdown-unit">Hari</span></div>
+                    <div class="countdown-item"><span class="countdown-num" id="cd-hours">--</span><span
+                            class="countdown-unit">Jam</span></div>
+                    <div class="countdown-item"><span class="countdown-num" id="cd-mins">--</span><span
+                            class="countdown-unit">Menit</span></div>
+                </div>
+            </div>
+
+            <div class="section-header reveal" style="margin-top:3rem;">
+                <div class="section-label">Venue</div>
+                <h3 class="section-title" style="font-size:1.6rem;">Venue Cabang Olahraga</h3>
+            </div>
+            <div class="venue-table-wrapper reveal">
+                <table class="venue-table">
+                    <thead>
+                        <tr>
+                            <th style="width:50px;">No</th>
+                            <th>Cabang Olahraga</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon">
+                                        <i class="fas fa-basketball-ball"></i>
+                                    </div>
+                                    Bola Basket
+                                </div>
+                            </td>
+                            <td>
+                                <div class="venue-name">GOR Hasanuddin HM</div>
+                                <div class="venue-address">Jl. Hasanuddin HM, Banjarmasin, Kalimantan Selatan</div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon">
+                                        <i class="fas fa-volleyball-ball"></i>
+                                    </div>
+                                    Voli Indoor
+                                </div>
+                            </td>
+                            <td>
+                                <div class="venue-name">Lapangan Voli Indoor SKB Mulawarman</div>
+                                <div class="venue-address">Jl. Mulawarman, Banjarmasin, Kalimantan Selatan</div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon">
+                                        <i class="fas fa-futbol"></i>
+                                    </div>
+                                    Sepak Bola
+                                </div>
+                            </td>
+                            <td>
+                                <div class="venue-name">Green Yakin Soccer Field</div>
+                                <div class="venue-address">Jl. Ahmad Yani, Banjarmasin, Kalimantan Selatan</div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon">
+                                        <i class="fas fa-futbol"></i>
+                                    </div>
+                                    Sepak Takraw
+                                </div>
+                            </td>
+                            <td>
+                                <div class="venue-name">Upik Indoor Futsal</div>
+                                <div class="venue-address">Jl. Veteran, Banjarmasin, Kalimantan Selatan</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL MEETING -->
+    <section class="tm-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Technical Meeting</div>
+                <h2 class="section-title">Jadwal Technical Meeting</h2>
+                <p class="section-desc">Technical meeting wajib dihadiri oleh perwakilan setiap kontingen dan cabang
+                    olahraga.
+                </p>
+            </div>
+            <div class="tm-table-wrapper reveal">
+                <table class="tm-table">
+                    <thead>
+                        <tr>
+                            <th style="width:50px;">No</th>
+                            <th>Cabang Olahraga</th>
+                            <th>Tanggal</th>
+                            <th>Waktu</th>
+                            <th>Tempat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon" style="width:28px;height:28px;font-size:14px;">🏀
+                                    </div> Bola Basket
+                                </div>
+                            </td>
+                            <td><span class="badge-date">14 Mei 2026</span></td>
+                            <td><span class="badge-time"><i class="fas fa-clock"></i> 08.00 WITA</span></td>
+                            <td>GOR Hasanuddin HM</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon" style="width:28px;height:28px;font-size:14px;">🏐
+                                    </div> Voli Indoor
+                                </div>
+                            </td>
+                            <td><span class="badge-date">14 Mei 2026</span></td>
+                            <td><span class="badge-time"><i class="fas fa-clock"></i> 08.00 WITA</span></td>
+                            <td>GOR Hasanuddin HM</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon" style="width:28px;height:28px;font-size:14px;">⚽</div>
+                                    Sepak Bola
+                                </div>
+                            </td>
+                            <td><span class="badge-date">14 Mei 2026</span></td>
+                            <td><span class="badge-time"><i class="fas fa-clock"></i> 08.00 WITA</span></td>
+                            <td>GOR Hasanuddin HM</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <div class="venue-sport">
+                                    <div class="venue-sport-icon" style="width:28px;height:28px;font-size:14px;">⚽
+                                    </div> Sepak Takraw
+                                </div>
+                            </td>
+                            <td><span class="badge-date">14 Mei 2026</span></td>
+                            <td><span class="badge-time"><i class="fas fa-clock"></i> 08.00 WITA</span></td>
+                            <td>GOR Hasanuddin HM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CABANG OLAHRAGA -->
+    <section class="cabor-section" id="cabor">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label">Pertandingan</div>
+                <h2 class="section-title">Cabang Olahraga</h2>
+                <p class="section-desc">Empat cabang olahraga dipertandingkan dalam POPDA Kalsel 2026 dengan atlet
+                    terbaik dari
+                    seluruh kabupaten dan kota.</p>
+            </div>
+            <div class="cabor-grid">
+                <div class="cabor-card reveal">
+                    <div class="cabor-card-bg" style="background: linear-gradient(135deg, #1a3a8a 0%, #2563eb 100%);">
+                    </div>
+                    <div class="cabor-placeholder"><i class="fas fa-basketball-ball"></i></div>
+                    <div class="cabor-overlay"></div>
+                    <div class="cabor-card-content">
+                        <div class="cabor-icon-badge">🏀</div>
+                        <div class="cabor-name">Bola Basket</div>
+                        <div class="cabor-info">GOR Hasanuddin HM</div>
+                    </div>
+                </div>
+                <div class="cabor-card reveal reveal-delay-1">
+                    <div class="cabor-card-bg" style="background: linear-gradient(135deg, #14532d 0%, #15803d 100%);">
+                    </div>
+                    <div class="cabor-placeholder"><i class="fas fa-volleyball-ball"></i></div>
+                    <div class="cabor-overlay"></div>
+                    <div class="cabor-card-content">
+                        <div class="cabor-icon-badge">🏐</div>
+                        <div class="cabor-name">Voli Indoor</div>
+                        <div class="cabor-info">SKB Mulawarman</div>
+                    </div>
+                </div>
+                <div class="cabor-card reveal reveal-delay-2">
+                    <div class="cabor-card-bg" style="background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%);">
+                    </div>
+                    <div class="cabor-placeholder"><i class="fas fa-futbol"></i></div>
+                    <div class="cabor-overlay"></div>
+                    <div class="cabor-card-content">
+                        <div class="cabor-icon-badge">⚽</div>
+                        <div class="cabor-name">Sepak Bola</div>
+                        <div class="cabor-info">Green Yakin Soccer Field</div>
+                    </div>
+                </div>
+                <div class="cabor-card reveal reveal-delay-3">
+                    <div class="cabor-card-bg" style="background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);">
+                    </div>
+                    <div class="cabor-placeholder"><i class="fas fa-futbol"></i></div>
+                    <div class="cabor-overlay"></div>
+                    <div class="cabor-card-content">
+                        <div class="cabor-icon-badge">⚽</div>
+                        <div class="cabor-name">Sepak Takraw</div>
+                        <div class="cabor-info">Upik Indoor Futsal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE SLIDER -->
+    <section class="quote-section">
+        <div class="quote-wrapper">
+            <div class="quote-icon">"</div>
+            <div class="quote-slide active">
+                <p class="quote-text">Olahraga bukan hanya tentang memenangkan pertandingan, tetapi tentang membangun
+                    karakter
+                    yang kuat dan jiwa yang tangguh untuk masa depan bangsa.</p>
+                <div class="quote-author">— Semangat POPDA Kalsel 2026</div>
+            </div>
+            <div class="quote-slide">
+                <p class="quote-text">Setiap tetes keringat yang jatuh di lapangan adalah investasi terbaik untuk meraih
+                    prestasi yang membanggakan daerah dan seluruh Kalimantan Selatan.</p>
+                <div class="quote-author">— Spirit Pelajar Kalsel</div>
+            </div>
+            <div class="quote-slide">
+                <p class="quote-text">Bersatu dalam keberagaman, berjuang dalam kejujuran, dan berprestasi untuk
+                    Kalimantan
+                    Selatan yang lebih gemilang di kancah nasional.</p>
+                <div class="quote-author">— Semangat Bersama</div>
+            </div>
+            <div class="quote-slide">
+                <p class="quote-text">Generasi muda Kalsel adalah aset terbesar daerah. Melalui POPDA, kita tempa mereka
+                    menjadi
+                    juara tidak hanya di lapangan, tetapi juga dalam kehidupan.</p>
+                <div class="quote-author">— Visi POPDA Kalsel</div>
+            </div>
+            <div class="quote-dots" id="quoteDots"></div>
+        </div>
+    </section>
+
+    <!-- MEDALI -->
+    <section class="medali-section" id="medali">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Klasemen</div>
+                <h2 class="section-title">Perolehan Medali</h2>
+                <p class="section-desc">Dihitung berdasarkan perolehan medali emas, perak dan perunggu masing-masing
+                    kontingen.
+                </p>
+            </div>
+
+            <div class="medali-table-wrapper reveal">
+                <table class="medali-table">
+                    <thead>
+                        <tr>
+                            <th style="width:55px;">No</th>
+                            <th>Kontingen</th>
+                            <th class="center">🥇 Emas</th>
+                            <th class="center">🥈 Perak</th>
+                            <th class="center">🥉 Perunggu</th>
+                            <th class="center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-1">1</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/banjarmasin.png" alt="Logo Banjarmasin" class="kontingen-img">
+                                    </div>
+
+                                    <span class="kontingen-name">
+                                        Kota Banjarmasin
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">8</span></td>
+                            <td class="medal-cell"><span class="medal-perak">6</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">4</span></td>
+                            <td class="medal-cell"><span class="medal-total">18</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-2">2</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/LOGO_KAB_BANJAR.png" alt="Logo Banjarmasin"
+                                            class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Banjar</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">6</span></td>
+                            <td class="medal-cell"><span class="medal-perak">5</span> </td>
+                            <td class="medal-cell"><span class="medal-perunggu">7</span></td>
+                            <td class="medal-cell"><span class="medal-total">18</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-3">3</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kota_Banjarbaru.png" alt="Logo Banjarmasin"
+                                            class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kota Banjarbaru</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">5</span></td>
+                            <td class="medal-cell"><span class="medal-perak">4</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">3</span></td>
+                            <td class="medal-cell"><span class="medal-total">12</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n"
+                                    style="background:var(--gray-200);color:var(--gray-700);">4</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Tabalong.jpeg" alt="Logo Banjarmasin"
+                                            class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Tabalong</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">4</span></td>
+                            <td class="medal-cell"><span class="medal-perak">3</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">5</span></td>
+                            <td class="medal-cell"><span class="medal-total">12</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n">5</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Balangan.png" alt="Logo Banjarmasin"
+                                            class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Balangan</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">3</span></td>
+                            <td class="medal-cell"><span class="medal-perak">4</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">2</span></td>
+                            <td class="medal-cell"><span class="medal-total">9</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n">6</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Barito_Kuala.png" alt="Logo Banjarmasin"
+                                            class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Barito Kuala</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">3</span></td>
+                            <td class="medal-cell"><span class="medal-perak">2</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">3</span></td>
+                            <td class="medal-cell"><span class="medal-total">8</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n">7</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Hulu_Sungai_Selatan.png"
+                                            alt="Logo Banjarmasin" class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Hulu Sungai Selatan</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">2</span></td>
+                            <td class="medal-cell"><span class="medal-perak">3</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">4</span></td>
+                            <td class="medal-cell"><span class="medal-total">9</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n">8</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Hulu_Sungai_Tengah.png"
+                                            alt="Logo Banjarmasin" class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Hulu Sungai Tengah</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">2</span></td>
+                            <td class="medal-cell"><span class="medal-perak">2</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">3</span></td>
+                            <td class="medal-cell"><span class="medal-total">7</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n">9</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Hulu_Sungai_Utara.png"
+                                            alt="Logo Banjarmasin" class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Hulu Sungai Utara</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">1</span></td>
+                            <td class="medal-cell"><span class="medal-perak">2</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">3</span></td>
+                            <td class="medal-cell"><span class="medal-total">6</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="rank-badge rank-n">10</div>
+                            </td>
+                            <td>
+                                <div class="kontingen-info">
+                                    <div class="kontingen-logos">
+                                        <img src="img/kab/Lambang_Kabupaten_Kotabaru.png" alt="Logo Banjarmasin"
+                                            class="kontingen-img">
+                                    </div>
+                                    <span class="kontingen-name">Kab. Kotabaru</span>
+                                </div>
+                            </td>
+                            <td class="medal-cell"><span class="medal-emas">1</span></td>
+                            <td class="medal-cell"><span class="medal-perak">1</span></td>
+                            <td class="medal-cell"><span class="medal-perunggu">2</span></td>
+                            <td class="medal-cell"><span class="medal-total">4</span></td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2" style="font-weight:800;font-size:14px;letter-spacing:0.04em;"><i
+                                    class="fas fa-trophy" style="color:var(--gold-400);margin-right:8px;"></i>Total
+                                Keseluruhan</td>
+                            <td class="medal-cell" style="color:var(--gold-400) !important;">35</td>
+                            <td class="medal-cell" style="color:#94a3b8 !important;">32</td>
+                            <td class="medal-cell" style="color:#d97706 !important;">36</td>
+                            <td class="medal-cell" style="font-size:1.1rem !important;">103</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Medali Per Cabor -->
+            <div class="cabor-medal-section">
+                <div class="section-header reveal" style="margin-bottom:1.5rem;">
+                    <div class="section-label">Per Cabang Olahraga</div>
+                    <h3 class="section-title" style="font-size:1.5rem;">Perolehan Medali per Cabor</h3>
+                </div>
+                <div class="cabor-medal-grid">
+                    <div class="cabor-medal-card reveal">
+                        <div class="cabor-medal-header">
+                            <div class="cabor-medal-icon">🏀</div>
+                            <div class="cabor-medal-name">Bola Basket</div>
+                        </div>
+                        <div class="cabor-medal-stats">
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-emas">8</span>
+                                <div class="cabor-medal-stat-label">Emas</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perak">8</span>
+                                <div class="cabor-medal-stat-label">Perak</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perunggu">10</span>
+                                <div class="cabor-medal-stat-label">Perunggu</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-total">26</span>
+                                <div class="cabor-medal-stat-label">Total</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabor-medal-card reveal reveal-delay-1">
+                        <div class="cabor-medal-header">
+                            <div class="cabor-medal-icon">⚽</div>
+                            <div class="cabor-medal-name">Sepak Bola</div>
+                        </div>
+                        <div class="cabor-medal-stats">
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-emas">7</span>
+                                <div class="cabor-medal-stat-label">Emas</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perak">8</span>
+                                <div class="cabor-medal-stat-label">Perak</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perunggu">8</span>
+                                <div class="cabor-medal-stat-label">Perunggu</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-total">23</span>
+                                <div class="cabor-medal-stat-label">Total</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabor-medal-card reveal reveal-delay-2">
+                        <div class="cabor-medal-header">
+                            <div class="cabor-medal-icon">🏸</div>
+                            <div class="cabor-medal-name">Sepak Takraw</div>
+                        </div>
+                        <div class="cabor-medal-stats">
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-emas">10</span>
+                                <div class="cabor-medal-stat-label">Emas</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perak">8</span>
+                                <div class="cabor-medal-stat-label">Perak</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perunggu">10</span>
+                                <div class="cabor-medal-stat-label">Perunggu</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-total">28</span>
+                                <div class="cabor-medal-stat-label">Total</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabor-medal-card reveal reveal-delay-3">
+                        <div class="cabor-medal-header">
+                            <div class="cabor-medal-icon">🏐</div>
+                            <div class="cabor-medal-name">Voli Indoor</div>
+                        </div>
+                        <div class="cabor-medal-stats">
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-emas">10</span>
+                                <div class="cabor-medal-stat-label">Emas</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perak">8</span>
+                                <div class="cabor-medal-stat-label">Perak</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-perunggu">8</span>
+                                <div class="cabor-medal-stat-label">Perunggu</div>
+                            </div>
+                            <div class="cabor-medal-stat"><span class="cabor-medal-stat-num medal-total">26</span>
+                                <div class="cabor-medal-stat-label">Total</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSOR -->
+    <section class="sponsor-section" id="sponsor">
+        <div class="sponsor-header">
+            <div class="section-label">Mitra Event</div>
+            <h2 class="section-title">Sponsor & Mitra</h2>
+            <p class="section-desc">Terima kasih kepada seluruh mitra dan sponsor yang telah mendukung penyelenggaraan
+                POPDA
+                Kalsel 2026.</p>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track" id="marqueeTrack">
+
+                <!-- BANK KALSEL -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="8" width="32" height="32" rx="4" fill="#111" />
+                        <text x="22" y="28" font-family="Arial" font-size="8" font-weight="900" fill="white"
+                            text-anchor="middle">TNF</text>
+                        <text x="86" y="20" font-family="Arial" font-size="7" font-weight="700" fill="#111"
+                            text-anchor="middle">THE NORTH</text>
+                        <text x="86" y="32" font-family="Arial" font-size="7" font-weight="900" fill="#e60000"
+                            text-anchor="middle">FACE</text>
+                    </svg>
+                </div>
+
+                <!-- EIGER -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="10" width="30" height="28" rx="4" fill="#e30000" />
+                        <path d="M10 36 L21 12 L32 36 Z" fill="white" />
+                        <text x="85" y="22" font-family="Arial" font-size="11" font-weight="900" fill="#e30000"
+                            text-anchor="middle">EIGER</text>
+                        <text x="85" y="35" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Adventure Equipment</text>
+                    </svg>
+                </div>
+
+                <!-- CONSINA -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <circle cx="22" cy="24" r="15" fill="#ff6b00" />
+                        <path d="M14 24 L22 14 L30 24 L26 24 L26 32 L18 32 L18 24 Z" fill="white" />
+                        <text x="82" y="21" font-family="Arial" font-size="10" font-weight="900" fill="#ff6b00"
+                            text-anchor="middle">CONSINA</text>
+                        <text x="82" y="34" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Outdoor Gear</text>
+                    </svg>
+                </div>
+
+                <!-- AREI -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="10" width="30" height="28" rx="4" fill="#1b5e20" />
+                        <text x="21" y="29" font-family="Arial" font-size="11" font-weight="900" fill="white"
+                            text-anchor="middle">AREI</text>
+                        <text x="84" y="21" font-family="Arial" font-size="9" font-weight="700" fill="#1b5e20"
+                            text-anchor="middle">AREI</text>
+                        <text x="84" y="33" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Outdoor Supplies</text>
+                    </svg>
+                </div>
+
+                <!-- SALOMON -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="4" y="10" width="26" height="28" rx="4" fill="#000" />
+                        <path d="M9 32 Q17 14 25 32" stroke="#00b0f0" stroke-width="3" fill="none" />
+                        <text x="82" y="22" font-family="Arial" font-size="10" font-weight="900" fill="#111"
+                            text-anchor="middle">SALOMON</text>
+                        <text x="82" y="35" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Time to Play</text>
+                    </svg>
+                </div>
+
+                <!-- OSPREY -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <circle cx="21" cy="24" r="14" fill="#0057a8" />
+                        <path d="M13 28 Q17 12 25 18 Q21 28 29 28" stroke="white" stroke-width="2" fill="none" />
+                        <text x="82" y="21" font-family="Arial" font-size="10" font-weight="900" fill="#0057a8"
+                            text-anchor="middle">OSPREY</text>
+                        <text x="82" y="34" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Pack & Travel Gear</text>
+                    </svg>
+                </div>
+
+                <!-- SUMMIT -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="10" width="30" height="28" rx="4" fill="#37474f" />
+                        <path d="M10 34 L21 14 L32 34 Z" fill="#ffa726" />
+                        <text x="84" y="21" font-family="Arial" font-size="9" font-weight="900" fill="#37474f"
+                            text-anchor="middle">SUMMIT</text>
+                        <text x="84" y="34" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Climbing & Trekking</text>
+                    </svg>
+                </div>
+
+                <!-- REI -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="4" y="8" width="34" height="32" rx="4" fill="#2e7d32" />
+                        <text x="21" y="29" font-family="Arial" font-size="14" font-weight="900" fill="white"
+                            text-anchor="middle">REI</text>
+                        <text x="84" y="20" font-family="Arial" font-size="8" font-weight="700" fill="#333"
+                            text-anchor="middle">CO-OP</text>
+                        <text x="84" y="32" font-family="Arial" font-size="8" font-weight="700" fill="#2e7d32"
+                            text-anchor="middle">OUTDOOR</text>
+                    </svg>
+                </div>
+
+                <!-- DUPLICATE SET -->
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="8" width="32" height="32" rx="4" fill="#111" />
+                        <text x="22" y="28" font-family="Arial" font-size="8" font-weight="900" fill="white"
+                            text-anchor="middle">TNF</text>
+                        <text x="86" y="20" font-family="Arial" font-size="7" font-weight="700" fill="#111"
+                            text-anchor="middle">THE NORTH</text>
+                        <text x="86" y="32" font-family="Arial" font-size="7" font-weight="900" fill="#e60000"
+                            text-anchor="middle">FACE</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="10" width="30" height="28" rx="4" fill="#e30000" />
+                        <path d="M10 36 L21 12 L32 36 Z" fill="white" />
+                        <text x="85" y="22" font-family="Arial" font-size="11" font-weight="900" fill="#e30000"
+                            text-anchor="middle">EIGER</text>
+                        <text x="85" y="35" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Adventure Equipment</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <circle cx="22" cy="24" r="15" fill="#ff6b00" />
+                        <path d="M14 24 L22 14 L30 24 L26 24 L26 32 L18 32 L18 24 Z" fill="white" />
+                        <text x="82" y="21" font-family="Arial" font-size="10" font-weight="900" fill="#ff6b00"
+                            text-anchor="middle">CONSINA</text>
+                        <text x="82" y="34" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Outdoor Gear</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="10" width="30" height="28" rx="4" fill="#1b5e20" />
+                        <text x="21" y="29" font-family="Arial" font-size="11" font-weight="900" fill="white"
+                            text-anchor="middle">AREI</text>
+                        <text x="84" y="21" font-family="Arial" font-size="9" font-weight="700" fill="#1b5e20"
+                            text-anchor="middle">AREI</text>
+                        <text x="84" y="33" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Outdoor Supplies</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="4" y="10" width="26" height="28" rx="4" fill="#000" />
+                        <path d="M9 32 Q17 14 25 32" stroke="#00b0f0" stroke-width="3" fill="none" />
+                        <text x="82" y="22" font-family="Arial" font-size="10" font-weight="900" fill="#111"
+                            text-anchor="middle">SALOMON</text>
+                        <text x="82" y="35" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Time to Play</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <circle cx="21" cy="24" r="14" fill="#0057a8" />
+                        <path d="M13 28 Q17 12 25 18 Q21 28 29 28" stroke="white" stroke-width="2" fill="none" />
+                        <text x="82" y="21" font-family="Arial" font-size="10" font-weight="900" fill="#0057a8"
+                            text-anchor="middle">OSPREY</text>
+                        <text x="82" y="34" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Pack & Travel Gear</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="6" y="10" width="30" height="28" rx="4" fill="#37474f" />
+                        <path d="M10 34 L21 14 L32 34 Z" fill="#ffa726" />
+                        <text x="84" y="21" font-family="Arial" font-size="9" font-weight="900" fill="#37474f"
+                            text-anchor="middle">SUMMIT</text>
+                        <text x="84" y="34" font-family="Arial" font-size="7" font-weight="500" fill="#555"
+                            text-anchor="middle">Climbing & Trekking</text>
+                    </svg>
+                </div>
+                <div class="sponsor-logo">
+                    <svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="130" height="48" rx="6" fill="white" />
+                        <rect x="4" y="8" width="34" height="32" rx="4" fill="#2e7d32" />
+                        <text x="21" y="29" font-family="Arial" font-size="14" font-weight="900" fill="white"
+                            text-anchor="middle">REI</text>
+                        <text x="84" y="20" font-family="Arial" font-size="8" font-weight="700" fill="#333"
+                            text-anchor="middle">CO-OP</text>
+                        <text x="84" y="32" font-family="Arial" font-size="8" font-weight="700" fill="#2e7d32"
+                            text-anchor="middle">OUTDOOR</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand-logo">
+                    <div class="footer-brand-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                    </div>
+                    <span class="footer-brand-name">POPDA <span>Kalsel 2026</span></span>
+                </div>
+                <p class="footer-desc">Pekan Olahraga Pelajar Daerah Kalimantan Selatan 2026. Ajang pembinaan dan
+                    pengembangan
+                    olahraga pelajar terbaik se-Provinsi Kalimantan Selatan.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Navigasi</div>
+                <ul class="footer-links">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#informasi">Informasi</a></li>
+                    <li><a href="#jadwal">Jadwal</a></li>
+                    <li><a href="#cabor">Cabang Olahraga</a></li>
+                    <li><a href="#medali">Perolehan Medali</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Event</div>
+                <ul class="footer-links">
+                    <li><a href="#">Technical Meeting</a></li>
+                    <li><a href="#">Pendaftaran</a></li>
+                    <li><a href="#">Peraturan</a></li>
+                    <li><a href="#">Hasil Pertandingan</a></li>
+                    <li><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Kontak</div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dinas Pemuda dan Olahraga Prov. Kalimantan Selatan, Banjarmasin</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(0511) 123-4567</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@popdakalsel2026.id</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Senin – Jumat, 08.00 – 16.00 WITA</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 POPDA Kalsel. All rights reserved.</span>
+            <span>Dibuat oleh <a href="#">Panitia POPDA Kalsel 2026</a></span>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // ===== NAVBAR SCROLL + BACK TO TOP =====
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.remove('transparent');
+                navbar.classList.add('solid');
+            } else {
+                navbar.classList.remove('solid');
+                navbar.classList.add('transparent');
+            }
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // ===== MOBILE NAV =====
+        function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
+        function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+        // ===== SCROLL REVEAL =====
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    revealObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // ===== COUNTDOWN =====
+        function updateCountdown() {
+            const target = new Date('2026-05-18T07:00:00+08:00');
+            const now = new Date();
+            const diff = target - now;
+            if (diff <= 0) {
+                document.getElementById('cd-days').textContent = '0';
+                document.getElementById('cd-hours').textContent = '0';
+                document.getElementById('cd-mins').textContent = '0';
+                return;
+            }
+            const days = Math.floor(diff / 86400000);
+            const hours = Math.floor((diff % 86400000) / 3600000);
+            const mins = Math.floor((diff % 3600000) / 60000);
+            document.getElementById('cd-days').textContent = days;
+            document.getElementById('cd-hours').textContent = hours;
+            document.getElementById('cd-mins').textContent = mins;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // ===== QUOTE SLIDER =====
+        const slides = document.querySelectorAll('.quote-slide');
+        const dotsContainer = document.getElementById('quoteDots');
+        let currentSlide = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'quote-dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dotsContainer.children[currentSlide].classList.remove('active');
+            currentSlide = n;
+            slides[currentSlide].classList.add('active');
+            dotsContainer.children[currentSlide].classList.add('active');
+        }
+
+        setInterval(() => {
+            goToSlide((currentSlide + 1) % slides.length);
+        }, 4500);
+
+        // ===== COUNTER ANIMATION =====
+        function animateCounter(el, target, duration) {
+            let start = 0;
+            const step = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += step;
+                if (start >= target) { start = target; clearInterval(timer); }
+                el.textContent = Math.round(start).toLocaleString('id-ID');
+            }, 16);
+        }
+
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const target = parseInt(e.target.dataset.target);
+                    const inner = e.target.querySelector('span') || e.target;
+                    animateCounter(inner, target, 1200);
+                    statObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        statNumbers.forEach(el => statObserver.observe(el));
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const id = a.getAttribute('href');
+                const el = document.querySelector(id);
+                if (el) {
+                    e.preventDefault();
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
